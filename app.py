@@ -16,6 +16,7 @@ def login():
     if user != None and user.verify_password(request.form["password"]):
         login_session['name'] = user.username
         login_session['logged_in'] = True
+
         return logged_in()
     else:
         return home()
@@ -37,9 +38,12 @@ def logged_in():
 
 @app.route('/logout')
 def logout():
-    return home()
+	
+	logout_session['name'] = user.username
+	logout_session['logged_out'] == False
+	return home()
 
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+	app.run(debug=True)
