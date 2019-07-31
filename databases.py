@@ -20,8 +20,9 @@ def get_user(username):
     return session.query(User).filter_by(username=username).first()
 
 
-def update_fav_food(fav_food):
-	user = User(fav_food= fav_food)
-	session.add(user)
+# def update_fav_food(fav_food):
+# 	user_fav_food = User(fav_food= fav_food)
+# 	session.add(user_fav_food)
+# 	session.commit()
 
 

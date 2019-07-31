@@ -38,9 +38,8 @@ def logged_in():
 
 @app.route('/logout')
 def logout():
-	
-	logout_session['name'] = user.username
-	logout_session['logged_out'] == False
+	login_session['name'] = None
+	login_session['logged_in'] = False
 	return home()
 
 
